@@ -1,0 +1,493 @@
+/* 
+ctrl-f quick nav: 
+    hero, 
+    introducerer, 
+    produkter, 
+    hvorfor slyngetræning, 
+    fordele, 
+    footer, 
+    media 
+*/
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+
+:root {
+  --maintextcolor: #b0b0b0;
+  --maintitlecolor: #bdbdbd;
+  --mainbgcolor: #191919;
+  --btnbgcolor: #00ff22;
+  --btnboxshadow: #fff;
+  --btnbgcolor2: rgba(65, 255, 68, 0.147);
+  --btntextcolor: rgb(222, 222, 222);
+  --txtshadow: green;
+  --txtherobanner: rgb(237, 237, 237);
+  --txtherobannersub: rgb(220, 220, 220);
+}
+
+/* --------------- SETTINGS END HERE ---------------  */
+/* --------------- SETTINGS END HERE ---------------  */
+
+body {
+  background-color: var(--mainbgcolor);
+}
+
+#navbar_cart_logo {
+  max-width: 3rem;
+  vertical-align: middle;
+}
+#navbar_icon_logo {
+  max-width: 8rem;
+}
+
+.navbar {
+  padding-top: 1.25rem;
+}
+
+.hero_main {
+  min-height: 100vh;
+  background: url("pics/a.modified.png") no-repeat;
+  background-size: cover;
+  background-position: center;
+  filter: grayscale(25%) brightness(100%);
+  z-index: 1;
+}
+
+.main_header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  padding: 1rem 10%;
+  display: flex;
+  justify-content: space-between;
+  z-index: 100;
+}
+
+.main_header::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.1);
+  backdrop-filter: blur(50px);
+  z-index: -1;
+}
+
+.main_header::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: -1;
+}
+
+.navbar a {
+  font-size: 1rem;
+  color: white;
+  text-decoration: none;
+  font-weight: 900;
+  margin-left: 2rem;
+  transition: font-size 0.3s ease;
+}
+.navbar a:hover {
+  font-size: 1.1rem;
+  text-shadow: 1px 1px 1px var(--txtshadow);
+}
+
+#menu-check {
+  display: none;
+}
+
+.icons {
+  position: absolute;
+  right: 5%;
+  font-size: 2.8rem;
+  color: var(--maintextcolor);
+  cursor: pointer;
+  display: none;
+  z-index: 1;
+}
+
+/*-------------------- END OF HEADER AND BACKGROUND --------------------*/
+/*-------------------- END OF HEADER AND BACKGROUND --------------------*/
+/* -------------------------------------------------------------------------------- */
+/* -------------------------------------------------------------------------------- */
+/*-------------------- HERO (velkommen) STARTS HERE ----------*/
+/*-------------------- HERO (velkommen) STARTS HERE ----------*/
+
+.velkommen_div {
+  padding-top: 15rem;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
+#velkommen_txt {
+  box-sizing: border-box;
+  max-width: 100%;
+  width: 80%;
+  margin: 0 auto; /* Center horizontally */
+  font-size: clamp(30px, 6vw, 6rem);
+  text-align: center;
+  color: var(--txtherobanner);
+  overflow: hidden;
+  text-shadow: 3px 3px 6px rgba(0, 0, 0, 0.5);
+  font-weight: 900;
+}
+
+#elevatingthecore_txt {
+  padding-top: 2.5rem;
+  box-sizing: border-box;
+  max-width: 50%;
+  width: 80%;
+  margin: 0 auto; /* Center horizontally */
+  font-size: clamp(16px, 2vw, 2rem);
+  text-align: center;
+  color: var(--txtherobannersub);
+  overflow: hidden;
+  text-shadow: 1px 1px 1px rgba(255, 255, 255, 0.5);
+  font-weight: 500;
+}
+
+#to-shop-btn {
+  font-size: clamp(16px, 1.5vw, 2rem);
+  background-color: var(--btnbgcolor);
+  padding: 0.75rem; /* Default padding */
+  margin: 2rem auto;
+  border-radius: 1.25rem;
+  color: var(--btntextcolor);
+  border: 2px;
+  border-style: solid;
+  cursor: pointer;
+  box-shadow: 0 0 15px var(--btnboxshadow);
+  transition: 0.3s ease;
+}
+
+#to-shop-btn:hover {
+  background: var(--btnbgcolor);
+  box-shadow: 0 0 50px var(--btnboxshadow);
+  letter-spacing: 0.05em;
+}
+
+/*-------------------- END OF HERO (velkommen) ----------*/
+/*-------------------- END OF HERO (velkommen) ----------*/
+/* -------------------------------------------------------------------------------- */
+/* -------------------------------------------------------------------------------- */
+/*-------------------- INTRODUCERER STARTS HERE ----------*/
+/*-------------------- INTRODUCERER STARTS HERE ----------*/
+
+.main_introducerer_div {
+  display: flex;
+  flex-direction: column;
+  flex: wrap;
+  width: 100%;
+  height: fit-content;
+  background-color: var(--mainbgcolor);
+  align-items: center;
+  justify-content: center;
+
+  box-sizing: border-box;
+
+  padding: 1rem 10%;
+  text-align: center;
+}
+
+#introducerer_corelines_txt {
+  color: var(--maintitlecolor);
+  font-size: clamp(16px, 4vh, 3rem);
+  margin-top: 7.5vh;
+}
+
+/*-------------------- END OF INTRODUCERER --------------------*/
+/*-------------------- END OF INTRODUCERER --------------------*/
+/* -------------------------------------------------------------------------------- */
+/* -------------------------------------------------------------------------------- */
+/*-------------------- PRODUKTER STARTS HERE ----------*/
+/*-------------------- PRODUKTER STARTS HERE ----------*/
+
+.se_produkt_btn {
+  font-size: clamp(12px, 1vw, 2rem);
+  padding: 0.75rem;
+  margin: 1rem 0;
+  border-radius: 0.5rem;
+  color: var(--btntextcolor);
+  border: 1px;
+  border-style: solid;
+  cursor: pointer;
+  box-shadow: 0 0 10px var(--btnboxshadow);
+  transition: 0.3s ease;
+}
+.se_produkt_btn:hover {
+  box-shadow: 0 0 20px var(--btnboxshadow);
+  letter-spacing: 0.05em;
+}
+
+.corelines_produkter_div {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 3rem;
+}
+
+.introducerer_produkt_div {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.introducerer_produkt_title {
+  color: var(--maintitlecolor);
+  padding: 0.5rem;
+}
+
+.introducerer_produkt_text {
+  color: var(--maintextcolor);
+}
+
+.produkt_img {
+  height: 250px;
+  width: 400px;
+}
+
+.fly_produkt_img {
+  padding-left: 2.5rem;
+}
+
+.fly_introducerer_div a {
+  margin-left: 1rem;
+}
+
+/*-------------------- END OF PRODUKTER --------------------*/
+/*-------------------- END OF PRODUKTER --------------------*/
+
+/* -------------------------------------------------------------------------------- */
+/* -------------------------------------------------------------------------------- */
+/* ---------- HVORFOR SLYNGETRÆNING ------- */
+/* ---------- HVORFOR SLYNGETRÆNING ------- */
+
+#hvorfor_slyngetræning {
+  margin-top: 2rem;
+  font-size: clamp(16px, 2vh, 3rem);
+  color: var(--maintextcolor);
+  margin-bottom: 1rem;
+  max-width: 1000px;
+}
+
+.slyngetræning_info {
+  max-width: 50%;
+  margin: 0 auto;
+  text-align: center;
+  padding-top: 7.5rem;
+  color: var(--maintextcolor);
+}
+.slyngetræning_info p {
+  margin-top: 1rem;
+}
+
+/* -------------------- END OF SLYNGETRÆNING -------------------- */
+/* -------------------- END OF SLYNGETRÆNING -------------------- */
+/* -------------------------------------------------------------------------------- */
+/* -------------------------------------------------------------------------------- */
+
+/* -------------------- FORDELE STARTS HERE -------------------- */
+/* -------------------- FORDELE STARTS HERE -------------------- */
+
+.fordele {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  grid-gap: 0.1rem; /* Optional: Add a gap between items */
+  margin: 5rem auto;
+  padding: 1rem;
+  max-width: 1200px;
+  background-color: var(--mainbgcolor);
+}
+
+.fordele_div {
+  background-color: var(--mainbgcolor);
+  display: grid;
+  grid-template-rows: 0fr;
+  transition: grid-template-rows 0.5s ease;
+  justify-items: center;
+}
+
+.fordele_div .fordele_div2 {
+  margin: 1rem;
+  overflow: hidden;
+  color: var(--maintextcolor);
+  text-align: center;
+  font-size: 0.95rem;
+}
+
+.fordele_info {
+  margin-top: 1rem;
+  color: var(--maintextcolor);
+}
+.læs_mere_class {
+  margin: 1rem;
+  color: var(--maintextcolor);
+  font-size: 0.75rem;
+  transition: font-size 0.3s ease;
+}
+
+.læs_mere_class:hover {
+  font-size: 0.85rem;
+}
+
+.fordele_icons {
+  width: 75px;
+  height: 75px;
+  align-self: center;
+}
+
+/*-------------------- END OF FORDELE --------------------*/
+/*-------------------- END OF FORDELE --------------------*/
+/* -------------------------------------------------------------------------------- */
+/* -------------------------------------------------------------------------------- */
+/*-------------------- FOOTER STARTS HERE ------------------*/
+/*-------------------- FOOTER STARTS HERE ------------------*/
+
+.main_footer {
+  background: rgba(255, 255, 255, 0.1);
+  height: 100px;
+}
+
+.navbar_footer {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.navbar_footer a {
+  font-size: 1rem;
+  color: var(--maintitlecolor);
+  text-decoration: none;
+  font-weight: 500;
+  margin-left: 5rem;
+  margin-top: 2rem;
+  transition: font-size 0.3s ease;
+}
+
+.navbar_footer a:hover {
+  font-size: 1.1rem;
+  text-shadow: 0.5px 0.5px 0.5px var(--txtshadow);
+}
+
+/*-------------------- END OF FOOTER --------------------*/
+/*-------------------- END OF FOOTER --------------------*/
+/* -------------------------------------------------------------------------------- */
+/* -------------------------------------------------------------------------------- */
+/* -------------------- MEDIA STARTS HERE --------------------  */
+/* -------------------- MEDIA STARTS HERE --------------------  */
+/* -------------------- MEDIA STARTS HERE --------------------  */
+/* -------------------- MEDIA STARTS HERE --------------------  */
+/* -------------------- MEDIA STARTS HERE --------------------  */
+/* -------------------- MEDIA STARTS HERE --------------------  */
+/* -------------------- MEDIA STARTS HERE --------------------  */
+/* -------------------- MEDIA STARTS HERE --------------------  */
+/* -------------------- MEDIA STARTS HERE --------------------  */
+/* -------------------- MEDIA STARTS HERE --------------------  */
+/* -------------------- MEDIA STARTS HERE --------------------  */
+/* -------------------- MEDIA STARTS HERE --------------------  */
+/* -------------------- MEDIA STARTS HERE --------------------  */
+/* -------------------- MEDIA STARTS HERE --------------------  */
+/* -------------------- MEDIA STARTS HERE --------------------  */
+/* -------------------- MEDIA STARTS HERE --------------------  */
+/* -------------------- MEDIA STARTS HERE --------------------  */
+/* -------------------- MEDIA STARTS HERE --------------------  */
+/* -------------------- MEDIA STARTS HERE --------------------  */
+/* -------------------- MEDIA STARTS HERE --------------------  */
+
+@media (max-width: 992px) {
+  .main_header {
+    padding: 1.3rem 5%;
+  }
+}
+
+@media (max-width: 768px) {
+  .main_header {
+    padding: 1rem 2.5%;
+  }
+
+  .fordele_icons {
+    width: 50px;
+    height: 50px;
+  }
+
+  .icons {
+    display: inline-flex;
+    top: 30%;
+  }
+
+  #menu-check:checked ~ .icons #menu-icon {
+    display: none;
+  }
+  #menu-check:checked ~ .icons #close-icon {
+    display: block;
+  }
+
+  .icons #close-icon {
+    display: none;
+  }
+
+  .navbar {
+    position: absolute;
+    top: 100%;
+    left: 0;
+    height: 0;
+    width: 100%;
+    background: rgba(0, 0, 0, 0.1);
+    backdrop-filter: blur(50px);
+    box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+    transition: 0.3s ease;
+  }
+
+  #menu-check:checked ~ .navbar {
+    height: 17.7rem;
+  }
+
+  .navbar a {
+    display: block;
+    font-size: 1.25rem;
+    margin: 1.5rem 0;
+    text-align: center;
+    transition: 0.3s ease;
+  }
+
+  #menu-check:checked ~ .navbar a {
+    transform: translateY(0);
+  }
+}
+
+@media (max-width: 500px) {
+  .hero_main {
+    min-height: 70vh;
+  }
+  .velkommen_div {
+    padding-top: 20rem;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+  }
+  #to-shop-btn {
+    margin-top: 2rem;
+  }
+
+  .navbar_footer a {
+    margin-left: 1.5rem;
+  }
+}
