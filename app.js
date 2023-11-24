@@ -58,5 +58,58 @@ class Hero extends HTMLElement {
         </div>`;
   }
 }
-
 customElements.define("hero-header", Hero);
+
+function myFunction() {
+  if (
+    window
+      .getComputedStyle(document.documentElement)
+      .getPropertyValue("--mainbgcolor") == "#191919"
+  ) {
+    document.documentElement.style.setProperty("--mainbgcolor", "#fff");
+  } else {
+    document.documentElement.style.setProperty("--mainbgcolor", "#191919");
+  }
+  if (
+    window
+      .getComputedStyle(document.documentElement)
+      .getPropertyValue("--maintitlecolor") == "#bdbdbd"
+  ) {
+    document.documentElement.style.setProperty("--maintitlecolor", "darkgrey");
+  } else {
+    document.documentElement.style.setProperty("--maintitlecolor", "#bdbdbd");
+  }
+  if (
+    window
+      .getComputedStyle(document.documentElement)
+      .getPropertyValue("--maintextcolor") == "#b0b0b0"
+  ) {
+    document.documentElement.style.setProperty("--maintextcolor", "darkgrey");
+  } else {
+    document.documentElement.style.setProperty("--maintextcolor", "#b0b0b0");
+  }
+  if (
+    window
+      .getComputedStyle(document.documentElement)
+      .getPropertyValue("--btntextcolor") == "rgb(222, 222, 222)"
+  ) {
+    document.documentElement.style.setProperty("--btntextcolor", "black");
+  } else {
+    document.documentElement.style.setProperty(
+      "--btntextcolor",
+      "rgb(222, 222, 222)"
+    );
+  }
+  if (
+    window
+      .getComputedStyle(document.documentElement)
+      .getPropertyValue("--txtherobanner") == "rgb(237, 237, 237)"
+  ) {
+    document.documentElement.style.setProperty("--txtherobanner", "darkgrey");
+  } else {
+    document.documentElement.style.setProperty(
+      "--txtherobanner",
+      "rgb(237, 237, 237)"
+    );
+  }
+}

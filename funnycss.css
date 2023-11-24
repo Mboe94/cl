@@ -1,0 +1,8 @@
+.hero_main {
+  min-height: 100vh;
+  background: url("pics/mathildepusen.jpg") no-repeat;
+  background-size: cover;
+  background-position: center;
+  filter: grayscale(25%) brightness(100%);
+  z-index: 1;
+}
