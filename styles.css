@@ -20,11 +20,11 @@ ctrl-f quick nav:
   --maintextcolor: #b0b0b0;
   --maintitlecolor: #bdbdbd;
   --mainbgcolor: #191919;
-  --btnbgcolor: #00ff22;
+  --btnbgcolor: #21ff3f;
   --btnboxshadow: #fff;
   --btnbgcolor2: rgba(65, 255, 68, 0.147);
   --btntextcolor: rgb(222, 222, 222);
-  --txtshadow: green;
+  --txtshadow: rgb(255, 255, 255);
   --txtherobanner: rgb(237, 237, 237);
   --txtherobannersub: rgb(220, 220, 220);
 }
@@ -162,16 +162,18 @@ body {
 
 #to-shop-btn {
   font-size: clamp(16px, 1.5vw, 2rem);
-  background-color: var(--btnbgcolor);
+
   padding: 0.75rem; /* Default padding */
   margin: 2rem auto;
   border-radius: 1.25rem;
   color: var(--btntextcolor);
   border: 2px;
   border-style: solid;
+  border-color: white;
   cursor: pointer;
   box-shadow: 0 0 15px var(--btnboxshadow);
   transition: 0.3s ease;
+  font-weight: 600;
 }
 
 #to-shop-btn:hover {
@@ -359,7 +361,7 @@ body {
 /*-------------------- FOOTER STARTS HERE ------------------*/
 
 .main_footer {
-  background: rgba(255, 255, 255, 0.1);
+  background: rgba(30, 30, 30, 1);
   height: 100px;
 }
 
