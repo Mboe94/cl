@@ -211,7 +211,11 @@ body {
   display: flex;
   justify-content: center;
   flex-wrap: wrap;
-  margin: 5rem;
+  margin: 10rem;
+}
+
+.corelines_produkter_div > * {
+  flex: 1;
 }
 
 .introducerer_produkt_div {
@@ -232,8 +236,8 @@ body {
 }
 
 .produkt_img {
-  height: 250px;
-  width: 400px;
+  max-height: 200px;
+  max-width: 350px;
 }
 
 .fly_produkt_img {
@@ -251,7 +255,29 @@ body {
   margin-left: 1.5rem;
 }
 
-/* LÆS MERE */
+.initialtext_productpage {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  grid-gap: 1rem; /* Optional: Add a gap between items */
+  margin: 0rem auto;
+  padding: 1.5rem 0rem;
+  max-width: 275px;
+  background-color: var(--mainbgcolor);
+  color: var(--maintextcolor);
+  font-size: 0.95rem;
+  text-align: center;
+}
+
+.se_produkt_køb_nu_div {
+  margin: 2rem 0;
+}
+
+/* ------------------------PRODUCTS END HERE -------------- */
+/* ------------------------PRODUCTS END HERE -------------- */
+/*-------------------------------------------------------------------------*/
+/*-------------------------------------------------------------------------*/
+/* ------------------------LÆSMERE STARTS HERE ------------ */
+/* ------------------------LÆSMERE STARTS HERE ------------*/
 
 .læsmere_container {
   display: grid;
@@ -279,10 +305,6 @@ body {
   font-size: 0.95rem;
 }
 
-.fordele_info {
-  margin-top: 1rem;
-  color: var(--maintextcolor);
-}
 .læs_mere_class {
   margin: 1rem;
   color: var(--maintextcolor);
@@ -294,27 +316,17 @@ body {
   font-size: 0.85rem;
 }
 
-/*.læs_mere_test {
-    margin-top: 1.5rem;
-    color: var(--maintextcolor);
-  }*/
+/*.fordele_info {
+  margin-top: 1rem;
+  color: var(--maintextcolor); 
+}*/
 
-.initialtext_productpage {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-  grid-gap: 1rem; /* Optional: Add a gap between items */
-  margin: 0rem auto;
-  padding: 1.5rem 1rem;
-  max-width: 400px;
-  background-color: var(--mainbgcolor);
-  color: var(--maintextcolor);
-  font-size: 0.95rem;
-  text-align: center;
-}
-
-.se_produkt_køb_nu_div {
-  margin: 2rem 0;
-}
+/* ------------------------LÆS MERE END HERE -------------- */
+/* ------------------------LÆS MERE END HERE -------------- */
+/*-------------------------------------------------------------------------*/
+/*-------------------------------------------------------------------------*/
+/* ------------------------FOOTER STARTS HERE ------------ */
+/* ------------------------FOOTER STARTS HERE ------------ */
 
 .main_footer {
   background: rgba(30, 30, 30, 1);
@@ -341,6 +353,31 @@ body {
   font-size: 1.1rem;
   text-shadow: 0.5px 0.5px 0.5px var(--txtshadow);
 }
+
+/*-------------------- END OF FOOTER --------------------*/
+/*-------------------- END OF FOOTER --------------------*/
+/* -------------------------------------------------------------------------------- */
+/* -------------------------------------------------------------------------------- */
+/* -------------------- MEDIA STARTS HERE --------------------  */
+/* -------------------- MEDIA STARTS HERE --------------------  */
+/* -------------------- MEDIA STARTS HERE --------------------  */
+/* -------------------- MEDIA STARTS HERE --------------------  */
+/* -------------------- MEDIA STARTS HERE --------------------  */
+/* -------------------- MEDIA STARTS HERE --------------------  */
+/* -------------------- MEDIA STARTS HERE --------------------  */
+/* -------------------- MEDIA STARTS HERE --------------------  */
+/* -------------------- MEDIA STARTS HERE --------------------  */
+/* -------------------- MEDIA STARTS HERE --------------------  */
+/* -------------------- MEDIA STARTS HERE --------------------  */
+/* -------------------- MEDIA STARTS HERE --------------------  */
+/* -------------------- MEDIA STARTS HERE --------------------  */
+/* -------------------- MEDIA STARTS HERE --------------------  */
+/* -------------------- MEDIA STARTS HERE --------------------  */
+/* -------------------- MEDIA STARTS HERE --------------------  */
+/* -------------------- MEDIA STARTS HERE --------------------  */
+/* -------------------- MEDIA STARTS HERE --------------------  */
+/* -------------------- MEDIA STARTS HERE --------------------  */
+/* -------------------- MEDIA STARTS HERE --------------------  */
 
 @media (max-width: 992px) {
   .main_header {
